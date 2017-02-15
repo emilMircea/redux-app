@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Photo from './Photo';
 
 const ProductGrid = React.createClass({
   render() {
     return (
       <div className='photo-grid'>
-        <p>I am the photogrid</p>
+        { this.props.products.map(
+          (product, i) =>
+            <Photo
+              key={i} i={i}
+              {...this.props}
+              product={product}
+            />
+          )
+        }
       </div>
     )
   }
