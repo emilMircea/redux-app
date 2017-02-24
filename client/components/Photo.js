@@ -19,7 +19,8 @@
             <figcaption>
                <p>{product.caption}</p>
                <div className="control-buttons">
-                  <button className="likes">&hearts; {product.likes}</button>
+                 {/*               the action in actions */}
+                  <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {product.likes}</button>
                   <Link className='button' to={`/view/${product.code}`}>
                      <span className="comment-count">
                         <span className="speech-bubble"></span>
@@ -29,7 +30,6 @@
                </div>
             </figcaption>
          </figure>
-
       )
    }
  });

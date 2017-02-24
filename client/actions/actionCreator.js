@@ -1,7 +1,9 @@
 // increment products
 export function increment(index) {
   return {
+    // this is the name of the action
     type: 'INCREMENT_QNT',
+    // identifier for the post that gets updated
     index
   }
 }
